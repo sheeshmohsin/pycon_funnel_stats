@@ -1,0 +1,592 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Style-Type" Content-Style-Type="text/html charset= utf-8">
+<meta http-equiv="Content-Style-Type" Content-Style-Type="text/html charset= utf-8">
+<link rel="icon" type="image/ico" href="http://s14.postimg.org/mwkabivm5/download.jpg" />
+<link type="text/css" media = "all" rel="stylesheet" href="stylesheet.css" />
+<title>Pycon funnel Stats</title>
+</head>
+<body>
+<div class="header">
+<div class="navbar">
+<a href= "http://www.python.org/"><img src = "http://s21.postimg.org/hr1ffad6r/images.jpg"></a>
+</div>
+<div class="navbar">
+<p><a href= "http://in.pycon.org/funnel/2013/">Pycon Funnel Stats</a></p>
+</div>
+</div>
+            
+            <!--
+                TASK 1
+                =======================================================
+                Create an introduction to your step-by-step-guide, with
+                details, a video, image and a list.
+            -->
+    
+                <div class="aside">
+        
+                    <!--
+                        This block contains a photo and has a caption.
+                        We have used a <div> to group and position the flickr photo
+                        with a paragraph to create a photo with a caption.
+                    -->
+                    <div class="photo">
+                        
+                   <img alt="Banana split" height="332" src="http://www.thehindu.com/multimedia/dynamic/01232/GIRLCHILD_THDVR_1232609f.jpg" width="400">
+        
+                      <p class="caption"><strong>During 2001- 2011, the share of children to total population has declined and the decline was sharper for female children.</strong></p>
+                    </div>
+                    
+                    <ul class="list-of-items">
+                      <li><h2><ol><blockquote>Likes</blockquote></ol></h2></li>
+                        {% for line in project %}
+    			    <li>{{ line }}</li>
+                        {% endfor %}
+                        
+                      </ul>
+                 </div>
+                  
+                      
+            
+            
+            <!--
+                TASK 2
+                =======================================================
+                Add your step-by-step instructions, with sub-tasks if
+                needed, and images (with captions) or videos.
+            -->
+                     
+
+              
+
+    <!--
+        TASK 3
+        =======================================================
+        Customise the visual style and appearance of your guide
+    -->
+
+    <style media="screen" type="text/css">
+        /*
+            Now onto some funky stuff!
+    
+            Everything inside the <style> tag is called CSS (Cascading Style Sheets)
+            and is used to define the look and feel of the webpage, including fonts,
+            colors, containers and positioning.
+      */
+        
+        
+        
+        body {
+            background-color:#2085cf;
+        }
+        
+        /* Styles for secondary headings <h2> */
+        h2 {
+            font-size:24px;
+            color:#249CA9;
+            font-weight:normal;
+            font-family:Georgia, serif;
+        }
+        
+        /* Styles for third level headings <h3> */
+        h3 {
+            font-size:19px;
+            color:#996699;
+            font-weight:bold;
+            font-family:Georgia, serif;
+        }
+        
+        /* Styles for fourth level headings <h3> */
+        h4 {
+            font-size:19px;
+            color:#249CA9;
+            font-weight:normal;
+            font-family:Georgia, serif;
+      }
+        
+        /* Styles for the right-hand column of the introduction */
+        .aside {
+            float:right;
+            width:400px;
+        }
+       
+        /* Styles for introduction photo */
+        .aside .photo {
+            border-radius:3px;
+            box-shadow:1px 3px 15px 2px #ddd;
+            
+            /*
+                CSS can be used to rotate HTML elements. Rotation is part of the
+                transform css property.
+            
+                Somewhat obviously, changing the value of the angle specified inside
+                'rotate()' will alter how much the element is roatated.
+            
+                This is only the tip of the iceberg though. A lot more can be achieved
+                with the transform property. There is a quite technical and more in depth
+                explanation here:
+                https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function#rotate()
+            */
+
+            transform: rotate(3deg); /* All */
+            
+            /*
+                Much like when setting a gradient, the transform property needs to be
+                set individually for the major web browsers using vendor prefixes but
+                apart from that the code is identical to the example above.
+            */
+            
+            -webkit-transform: rotate(3deg); /* Chrome & Safari */
+            -moz-transform: rotate(3deg); /* Firefox */
+            -ms-transform: rotate(3deg); /* IE */
+            -o-transform: rotate(3deg); /* Opera */
+        }
+        
+        /* Styles for introduction photo hover state */
+        .aside .photo:hover {
+            /*
+                We can alter most aspects of an element's styling for the hover state.
+                Here we're changing the angle of rotation to add a rotating effect when
+                the mouse is moved over the the introduction photo.
+            */
+            
+            transform: rotate(1deg); /* All */
+            
+            -webkit-transform: rotate(1deg); /* Chrome & Safari */
+            -moz-transform: rotate(1deg); /* Firefox */
+            -ms-transform: rotate(1deg); /* IE */
+            -o-transform: rotate(1deg); /* Opera */
+        }
+        
+        /* Styles for introduction photo caption */
+        .aside .photo .caption {
+            font-size:14px;
+        }
+       /* Styles for definition lists <dl> */
+        dl {
+            border-top:1px dotted #88b6d2;
+            border-bottom:1px dotted #88b6d2;
+            font-family:monospace;
+        }
+        
+        /* Styles for definition list titles <dt> */
+        dt {
+            font-weight:bold;
+            text-transform:uppercase;
+        }
+        
+        /* Styles for definition list descriptions <dd> */
+        dd {
+            color:#666;
+        }
+        
+        
+        /* Styles for blockquotes <blockquote> */
+        blockquote {
+            border-left:2px solid #fede72;
+            background-color:#f6a69d;
+        }
+        
+        /* Styles for blockquote speech mark */
+        blockquote:before {
+            color: #CCC;
+        }
+        
+        /* Styles for blockquote paragraphs <p> */
+        blockquote p {
+            font-style:italic;
+            font-size:22px;
+        }
+        
+        
+        /* Styles for unordered lists <ul> */
+        ul {
+            font-family:"Courier New", Courier, monospace;
+            box-shadow:1px 3px 15px 2px #ddd;
+            background-color: #eef5f9;
+            border: 1px solid #dedede;
+            
+            transform: rotate(-3deg); /* All */
+            
+            -webkit-transform: rotate(-3deg); /* Chrome & Safari */
+            -moz-transform: rotate(-3deg); /* Firefox */
+            -ms-transform: rotate(-3deg); /* IE */
+            -o-transform: rotate(-3deg); /* Opera */
+        }
+        
+        /* Styles for unordered list hover state */
+        ul:hover {
+            transform: rotate(2deg); /* All */
+            
+            -webkit-transform: rotate(2deg); /* Chrome & Safari */
+            -moz-transform: rotate(2deg); /* Firefox */
+            -ms-transform: rotate(2deg); /* IE */
+            -o-transform: rotate(2deg); /* Opera */
+        }
+        
+        /* Heading styles for unordered list items */
+        ul h2 {
+             color:#e63f2d;
+        }
+        
+        /* Styles for unordered list list items <li> */
+        ul li {
+            list-style-type: none;
+            border-top: 1px dotted #88b6d2;
+            text-transform: capitalize;
+            font-size:14px;
+        }
+        
+        /* Hover state styles for list items inside unordered list */
+        ul li:hover {
+            background-color:#c07cda ;
+        }
+        
+        
+        
+        /* STEP BY STEP INSTRUCTIONS */
+        
+        /* Defaut styles for all steps */
+        .step-by-step {
+            
+        }
+        
+        /* Styles for each step list item */
+        .step-by-step li {
+            color:#fff;
+        }
+        
+        /* Styles for list items inside sub lists */
+        .step-by-step li li {
+            list-style-type: lower-alpha;
+        }
+        
+        /* Step by step instruction media (images and videos) */
+        .step-by-step .media-content {
+            box-shadow:0 1px 0 #eee;
+        }
+        
+        /* Step by step instructions image captions */
+        .step-by-step .media-content .caption {
+            bottom:0;
+            left:0;
+            background:#fff;
+        }
+        
+        /* Content for each step */
+        .content {
+            border-radius: 0px 0px 0px 0px;
+            color:#fff;
+            box-shadow: 0px 0px 3px 0px rgba(0,0,0,.25);
+            
+            background: #fff;
+            background: linear-gradient(top, #F9F9F9, #F9F9F9);
+            
+            background: -webkit-linear-gradient(top, #F9F9F9, #F9F9F9);
+            background: -moz-linear-gradient(top, #F9F9F9, #F9F9F9);
+            background: -o-linear-gradient(top, #F9F9F9, #F9F9F9);
+            background: -ms-linear-gradient(top, #F9F9F9, #F9F9F9);
+        }
+        
+        /* Paragraph and heading styles for each step */
+        .content p, 
+        .content h2 {
+            color:#000;
+        }
+        
+        /* Styles for item numbering */
+        .step-by-step li:before {
+            border-radius: 0px 0px 0px 0px;
+            
+            background: #F9F9F9;
+            background: linear-gradient(top,#F9F9F9, #F9F9F9);
+            
+            background: -webkit-linear-gradient(top, #996699, #F9F9F9);
+            background: -moz-linear-gradient(top, #996699, #F9F9F9);
+            background: -o-linear-gradient(top, #996699, #F9F9F9);
+            background: -ms-linear-gradient(top, #996699, #F9F9F9);
+        }
+        
+        /* Styles for sub-list item numbering */
+        .step-by-step li li:before {
+            background: #249CA9;
+            background: linear-gradient(top, #F9F9F9, #F9F9F9);
+            
+            background: -webkit-linear-gradient(top, #249CA9, #F9F9F9);
+            background: -moz-linear-gradient(top, #249CA9, #F9F9F9);
+            background: -o-linear-gradient(top, #249CA9, #F9F9F9);
+            background: -ms-linear-gradient(top, #249CA9, #F9F9F9);
+        }
+        
+    </style>
+
+
+    <style media="screen" type="text/css">
+        /*
+            ARE YOU FEELING AMBITIOUS?
+
+            The CSS below controls all the advanced aspects of the page and its design.
+            You're not expected to edit it but you are free to have a play. An ace
+            reference resource to help you understand it can me found here:
+
+            https://developer.mozilla.org/en-US/docs/Web/CSS
+        
+            Be aware though, you can break your page quite easily with this part of CSS.
+
+        */
+        
+        
+        
+        body {
+            padding:30px;
+        }
+        
+        /* Heading styles */
+        h1 {
+            margin:0;
+            margin-left:-30px;
+            width:480px;
+        }
+        h2, h3, h4 {
+            margin:0 0 0.5em;
+        }
+        
+        /* Paragraph Text styles */
+        p {
+            margin:16px 0;
+        }
+        
+        /* Page Layout */
+        .wrapper {
+            margin:0 auto;
+        }
+        .logo {
+            margin:0 auto;
+            display:block;
+        }
+        .introduction {
+            padding:40px;
+            position:relative;
+            margin-bottom:40px;
+            overflow:hidden;
+        }
+        .information {
+            padding-left:30px;
+        }
+        .information iframe {
+            margin:16px 0 16px -30px;
+        }
+        
+        /* Introduction Photo */
+        .aside .photo {
+            float:left;
+            padding:20px;        
+            margin-left: -20px;
+    
+            -webkit-transition: -webkit-transform 0.2s; /* Safari */
+            -moz-transition: -webkit-transform 0.2s; /* Firefox */
+            -ms-transition: -webkit-transform 0.2s; /* IE */
+            -o-transition: -webkit-transform 0.2s; /* Opera */
+            transition: transform 0.2s; /* All */
+        }
+        .aside .photo img {
+            width:380px;
+            height:auto;
+            border-radius:2px;
+        }
+        aside .photo .caption {
+        }
+        
+        /* Definition Lists */
+        dl {
+            margin:16px 0 32px -30px;
+            padding:5px 0;
+        }
+        dl dt {
+            display:inline-block;
+        }
+        dl dd {
+            display:inline-block;
+            padding:0;
+            margin:0 10px 0 0;
+        }
+        
+        /* This is the styling for blockquotes */
+        blockquote {
+            padding:10px 30px 10px 40px;
+            position:relative;
+            margin:32px 0 32px -30px;
+        }
+        blockquote:before {
+            content: 'L';
+            position: absolute;
+            font-size: 55px;
+            top: 4px;
+            left: 10px;
+        }
+        
+        /* List of items */
+        ul {
+            padding:0;
+            margin:0;
+            position:relative;
+            z-index:200;
+            float:left;
+            width:340px;
+    
+            transition: transform 0.2s;
+            -webkit-transition: -webkit-transform 0.2s; /* Safari */
+        }
+        ul h2 {
+            margin:20px 0 0;
+        }
+        ul li {
+            padding:5px 1px;
+            height: auto;
+            padding: 10px 10px 10px 25px;
+        }
+        ul li:first-child {
+            list-style-type: none;
+            border-top: none;
+        }
+        ul li:hover {
+          -webkit-transition: all 0.2s;
+          -moz-transition:    all 0.2s;
+          -ms-transition:     all 0.2s;
+          -o-transition:      all 0.2s;
+        }
+        ul li:first-child:hover {
+            background-color:transparent;
+        }
+        
+        /* Step by step instructions */
+        .step-by-step {  
+            padding:0;
+            position: relative;
+            z-index:0;
+            margin-left:40px;
+        }
+        .step-by-step li {
+            position: relative;
+            text-align: left;
+            list-style-type: decimal;
+        }
+        .step-by-step li li {
+            list-style-type: lower-alpha;
+            margin-right:20px;
+        }
+        .step-by-step .media-content {
+            position:relative;
+        }
+        .step-by-step .media-content img {
+            display:block;
+            margin:0;
+            width:100%;
+            height:auto;
+        }
+        .step-by-step .media-content .caption {
+            position:absolute;
+            padding:0.5em 1em;
+        }
+        .step-by-step .media-content iframe {
+            display:block;
+            margin:0;
+        }
+        
+        /* Content for each step */
+        .content {
+            padding: 20px;
+            margin-bottom:10px;
+        }
+        .content img,
+        .content iframe {
+            width:100%;
+            margin-bottom:10px;
+        }
+        .content p, 
+        .content h2 {
+            margin-top:0;
+        }
+        .content *:last-child {
+            margin-bottom:0;
+        }
+        
+        /* Advanced CSS for item number styling */
+        .step-by-step li:before {
+            content: "";
+            width: 40px;
+            height:64px;
+            position: absolute;
+            top:0;
+            left:-40px;
+            z-index:-1;
+        }
+
+        a img {
+            border:none;
+        }
+    </style>
+    
+    <!--{if lte IE 8}>
+    
+        <style type="text/css" media="screen">
+            .step-by-step li:before {
+                opacity:0.5
+            }
+        </style>
+    
+    <!{endif}-->
+
+<style media="screen" type="text/css">
+.header
+{
+    margin-top: -90px;
+    height: 100px;
+    width: 80em;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+    z-index=1;
+}
+.navbar
+{
+    display: inline-block;
+}
+p:hover
+{
+    opacity: 0.8;
+}
+img
+{
+    margin-top: 50px;
+    margin-left: 40px;
+    height: 45px;
+    width: 45px;
+}
+img:hover
+{
+    opacity: 0.8;
+}
+p
+{
+    color: white;
+    font-size: 3em;
+    font-family: "Harlow Solid Italic", "Freestyle Script", "URW Chancery L";
+    font-weight: Bold;
+    position:relative;
+    top: 10px;
+}
+a
+{
+    margin-top: 15px;
+    color: white;
+    text-decoration: none;
+}
+body
+{
+    background-color: #38B0DE;
+}
+</style>
+</body>
+</html>
