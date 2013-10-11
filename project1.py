@@ -78,7 +78,6 @@ for u in fname:
         if u[5]== "Software Development Tools":
             sum5a=sum5a+int(u[8])
             softa+=1
-	    print sum5a,softa
         if u[5]== "Infrastructure":
             sum6a=sum6a+int(u[8])
             infra+=1
@@ -96,16 +95,16 @@ for u in fname:
             worka+=1
 
 overallaveragelikes = sum/l
-print "overallaveragelikes=",overallaveragelikes
+print "Over all average likes=",overallaveragelikes
 
 avgvotesforinter= sum1/inter
-print "average votes for intermediate level=",avgvotesforinter
+print "Average votes for intermediate level=",avgvotesforinter
 
 avgvotesforbeg= sum2/beg
-print "average votes for beginner level=",avgvotesforbeg
+print "Average votes for beginner level=",avgvotesforbeg
 
 avgvotesforadv= sum3/adv
-print "average votes for advanced level=",avgvotesforadv
+print "Average votes for advanced level=",avgvotesforadv
 
 avgvotesforinterforsci = sum4/sci
 print "Average votes for intermediate level for Scientific Computing=",avgvotesforinterforsci
@@ -168,12 +167,12 @@ avgvotesforinterforweba = sum7a/weba
 print "Average votes for Advanced level for Web Development=",avgvotesforinterforweba
 
 avgvotesforinterforemba = sum8a/emba
-print "Average votes for intermediate level for Embedded/Real-time Python=",avgvotesforinterforemba
+print "Average votes for Advanced level for Embedded/Real-time Python=",avgvotesforinterforemba
 
 avgvotesforinterforcora = sum9a/cora
-print "Average votes for intermediate level for Core Python=",avgvotesforinterforcora
+print "Average votes for Advanced level for Core Python=",avgvotesforinterforcora
 
 avgvotesforinterforworka = sum0a/worka
-print "Average votes for intermediate level for Workshops=",avgvotesforinterforworka
+print "Average votes for Advanced level for Workshops=",avgvotesforinterforworka
 
 

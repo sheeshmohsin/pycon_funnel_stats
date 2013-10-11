@@ -16,7 +16,6 @@ def index():
         )
 
         for line in iter(proc.stdout.readline,''):
-            time.sleep(1)                           # Don't need this just shows the text streaming
             yield line.rstrip() + '<br/>\n'
 
     env = Environment(loader=FileSystemLoader('templates'))
