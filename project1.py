@@ -272,4 +272,3 @@ print "Number of proposals for Embedded/Real-Time Python=",emba
 print "Number of proposals for Core Python=",cora
 print "Number of proposals for Workshops=",worka
 
-

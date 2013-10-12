@@ -83,18 +83,18 @@
         </div>
 	<div class="level-wise">
 		<table>
-			<th><h1><center>Detailed Description of Proposals for talks</center><br>(Level-wise and Section-wise)</h1><br><hr></th>
-                        <tr><td><h3>Intermediate level</h3><br><hr></td></tr>
+			<th><h1 id="sizer"><center>Detailed Description of Proposals for talks</center><br>(Level-wise and Section-wise)</h1><br><hr></th>
+                        <tr><td><h3 id="size"><center>Intermediate level</center></h3><br><hr></td></tr>
 			<tr><td> {{ line }} </td></tr>
 		    {% elif i>30 and i<=36 %}
 			<tr><td> {{ line }} </td></tr>
 		    {% elif i==37 %}
-			<tr><td><hr><br><h3>Beginner level</h3><br><hr></td></tr>
+			<tr><td><hr><br><h3 id="size"><center>Beginner level</center></h3><br><hr></td></tr>
 			<tr><td> {{ line }} </td></tr>
 		    {% elif i>37 and i<=43 %}
 			<tr><td> {{ line }} </td></tr>
 		    {% elif i==44 %}
-			<tr><td><hr><br><h3>Advanced level</h2><br><hr></td></tr>
+			<tr><td><hr><br><h3 id="size"><center>Advanced level</center></h2><br><hr></td></tr>
 			<tr><td> {{ line }} </td></tr>
 		    {% elif i>44 and i<=50 %}
 			<tr><td> {{ line }} </td></tr>
@@ -719,13 +719,24 @@ body
 }
 .level-wise
 {
+    background-color: #D9D9F3;
     width: 510px;
     margin: auto;
     border: 2px solid #32CD32;
-    border-radius: 20px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     position: absolute;
     top: 57%;
     left: 25%;
+    box-shadow: rgba(0,0,0,0.5) 10px 10px;
+}
+#size
+{
+    font-size: 1.2em;
+}
+#sizer
+{
+    font-size: 1.2em;
 }
 .level-wise table th h1
 {
@@ -740,6 +751,7 @@ h3 {
 }
 hr
 {
+    color: #32CD32;
     width: 103%;
     position: relative;
     right: 0.5%;
