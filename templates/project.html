@@ -56,14 +56,11 @@
 			    {% elif i<=18 %}
 				<li> {{ line }} </li>
 			    {% elif i==19 %}
-				<li><h2>Advanced Level Links</h2></li>
+				<li><h2>Advanced Level Likes</h2></li>
 				<li> {{ line }} </li>
 			    {% elif i<=25 %}
 				<li> {{ line }} </li>
-			    {% else %}
-				
-			    {% endif %}
-                        {% endfor %}
+                            {% elif i==26 %}
                         
                       </ul>
                  </div>
@@ -71,32 +68,42 @@
              <div class="pin red"></div>
             
             <h1 class="change">Proposal for talks<br>==============</h1>
-          <p class="change" id="sheesh"><br><br>{% set i=0 %}
-                        {% for line in project2 %}
-			    {% set i=i+1 %}
-			    {% if i==26 %}
-    			        <i> {{ line }} </i>
-			    {% else %}
-				
-			    {% endif %}
-			{% endfor %}</p>
+          <p class="change" id="sheesh"><br><br>
+    			        <i> {{ line }} </i></p>
         </div>
               <div class="post-it-note blue" id="note-2">
             <div class="pin yellow"></div>
 
             <h1 id="move">Proposal for talks<br>(Level Wise)</h1>
             <ol>
-			{% set i=0 %}
-                        {% for line in project3 %}
-			    {% set i=i+1 %}
-			    {% if i>=27 and i<=29 %}
+			    {% elif i>=27 and i<=29 %}
     			        <li> {{ line }} </li>
-			    {% else %}
-				
-			    {% endif %}
-			{% endfor %}
+			    {% elif i==30 %}
           </ol>
-        </div>        
+        </div>
+	<div class="level-wise">
+		<table>
+			<th><h1><center>Detailed Description of Proposals for talks</center><br>(Level-wise and Section-wise)</h1><br><hr></th>
+                        <tr><td><h3>Intermediate level</h3><br><hr></td></tr>
+			<tr><td> {{ line }} </td></tr>
+		    {% elif i>30 and i<=36 %}
+			<tr><td> {{ line }} </td></tr>
+		    {% elif i==37 %}
+			<tr><td><hr><br><h3>Beginner level</h3><br><hr></td></tr>
+			<tr><td> {{ line }} </td></tr>
+		    {% elif i>37 and i<=43 %}
+			<tr><td> {{ line }} </td></tr>
+		    {% elif i==44 %}
+			<tr><td><hr><br><h3>Advanced level</h2><br><hr></td></tr>
+			<tr><td> {{ line }} </td></tr>
+		    {% elif i>44 and i<=50 %}
+			<tr><td> {{ line }} </td></tr>
+		    {% else %}
+			
+		    {% endif %}
+		{% endfor %}
+		</table>
+        </div>
             
             
             <!--
@@ -141,7 +148,7 @@
 
         /* Basic styles for the post it note*/
          .post-it-note {
-            width:280px;
+            width:300px;
              height:230px;
              padding:20px;
              font-family:"Comic Sans MS", sans-serif;
@@ -709,6 +716,33 @@ a
 body
 {
     background-color: #38B0DE;
+}
+.level-wise
+{
+    width: 510px;
+    margin: auto;
+    border: 2px solid #32CD32;
+    border-radius: 20px;
+    position: absolute;
+    top: 57%;
+    left: 25%;
+}
+.level-wise table th h1
+{
+    position: relative;
+    margin-left: 10px;
+}
+h3 {
+     font-size:19px;
+     color:#996699;
+     font-weight:bold;
+     font-family:Georgia, serif;
+}
+hr
+{
+    width: 103%;
+    position: relative;
+    right: 0.5%;
 }
 </style>
 </body>

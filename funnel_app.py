@@ -19,6 +19,6 @@ def index():
     
     env = Environment(loader=FileSystemLoader('templates'))
     tmpl = env.get_template('project.html')
-    return flask.Response(tmpl.generate(project=inner(),project2=inner(),project3=inner()))
+    return flask.Response(tmpl.generate(project=inner()))
 
 app.run(debug=True, port=5000, host='0.0.0.0')

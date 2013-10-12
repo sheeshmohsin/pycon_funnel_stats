@@ -247,3 +247,29 @@ print "Total Number of people applied for talks=",l
 print "Total Number of proposals under intermediate level=",inter
 print "Total Number of proposals under beginner level=",beg
 print "Total Number of proposals under advanced level=",adv
+# //Intermediate level//*/
+print "Number of proposals for Scientific Computing=",sci
+print "Number of proposals for Software Development Tools=",soft
+print "Number of proposals for Infrastructure=",infr
+print "Number of proposals for Web Developemnt=",web
+print "Number of proposals for Embedded/Real-Time Python=",emb
+print "Number of proposals for Core Python=",cor
+print "Number of proposals for Workshops=",work
+# //Beginner level// */
+print "Number of proposals for Scientific Computing=",scib
+print "Number of proposals for Software Development Tools=",softb
+print "Number of proposals for Infrastructure=",infrb
+print "Number of proposals for Web Developemnt=",webb
+print "Number of proposals for Embedded/Real-Time Python=",embb
+print "Number of proposals for Core Python=",corb
+print "Number of proposals for Workshops=",workb
+# //Advanced level//*/
+print "Number of proposals for Scientific Computing=",scia
+print "Number of proposals for Software Development Tools=",softa
+print "Number of proposals for Infrastructure=",infra
+print "Number of proposals for Web Developemnt=",weba
+print "Number of proposals for Embedded/Real-Time Python=",emba
+print "Number of proposals for Core Python=",cora
+print "Number of proposals for Workshops=",worka
+
+
