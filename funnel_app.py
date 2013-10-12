@@ -1,6 +1,5 @@
 import flask
 import subprocess
-import time          #You don't need this. Just included it so you can see the output stream.
 from jinja2 import Environment
 from jinja2.loaders import FileSystemLoader
 
@@ -17,9 +16,9 @@ def index():
 
         for line in iter(proc.stdout.readline,''):
             yield line.rstrip() + '<br/>\n'
-
+    
     env = Environment(loader=FileSystemLoader('templates'))
     tmpl = env.get_template('project.html')
-    return flask.Response(tmpl.generate(project=inner()))
+    return flask.Response(tmpl.generate(project=inner(),project2=inner(),project3=inner()))
 
 app.run(debug=True, port=5000, host='0.0.0.0')

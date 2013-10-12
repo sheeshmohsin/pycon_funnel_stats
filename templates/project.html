@@ -35,19 +35,68 @@
                         
                    <img alt="Banana split" height="332" src="http://cricages.com/wp-content/uploads/bar-graph.gif" width="400">
         
-                      <p class="caption"><strong>Graph comparison for people applying in different meet in different countries.</strong></p>
+                      <p class="caption"><strong>Graph comparison for people applying for talks in  different meet in different countries.</strong></p>
                     </div>
                     
                     <ul class="list-of-items">
                       <li><h2><ol><blockquote>Likes</blockquote></ol></h2></li>
+			{% set i=0 %}
                         {% for line in project %}
-    			    <li>{{ line }}</li>
+			    {% set i=i+1 %}
+			    {% if i<=4 %}
+    			        <li> {{ line }} </li>
+			    {% elif i==5 %}
+				<li><h2>Intermediate Level Likes</h2></li>
+				<li> {{ line }} </li>
+			    {% elif i<=11 %}
+				<li> {{ line }} </li>
+			    {% elif i==12 %}
+				<li><h2>Beginner Level Likes</h2></li>
+				<li> {{ line }} </li>
+			    {% elif i<=18 %}
+				<li> {{ line }} </li>
+			    {% elif i==19 %}
+				<li><h2>Advanced Level Links</h2></li>
+				<li> {{ line }} </li>
+			    {% elif i<=25 %}
+				<li> {{ line }} </li>
+			    {% else %}
+				
+			    {% endif %}
                         {% endfor %}
                         
                       </ul>
                  </div>
-                  
-                      
+                  <div class="post-it-note yellow" id="note-4">
+             <div class="pin red"></div>
+            
+            <h1 class="change">Proposal for talks<br>==============</h1>
+          <p class="change" id="sheesh"><br><br>{% set i=0 %}
+                        {% for line in project2 %}
+			    {% set i=i+1 %}
+			    {% if i==26 %}
+    			        <i> {{ line }} </i>
+			    {% else %}
+				
+			    {% endif %}
+			{% endfor %}</p>
+        </div>
+              <div class="post-it-note blue" id="note-2">
+            <div class="pin yellow"></div>
+
+            <h1 id="move">Proposal for talks<br>(Level Wise)</h1>
+            <ol>
+			{% set i=0 %}
+                        {% for line in project3 %}
+			    {% set i=i+1 %}
+			    {% if i>=27 and i<=29 %}
+    			        <li> {{ line }} </li>
+			    {% else %}
+				
+			    {% endif %}
+			{% endfor %}
+          </ol>
+        </div>        
             
             
             <!--
@@ -75,11 +124,101 @@
             colors, containers and positioning.
       */
         
-        
-        
-        body {
-            background-color:#2085cf;
+        * {
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            -ms-box-sizing:border-box;
+            box-sizing:border-box;
         }
+        html {
+            height:100%;
+        }
+         .post-it-note,
+         .polaroid {
+            position: absolute;
+            box-shadow: 3px 3px 2px rgba(0,0,0,.4);
+         }
+
+        /* Basic styles for the post it note*/
+         .post-it-note {
+            width:280px;
+             height:230px;
+             padding:20px;
+             font-family:"Comic Sans MS", sans-serif;
+             background-color:#e8dd62;
+             background: -webkit-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /* Safari/Chrome */
+             background: -moz-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /*  Old Firefox */
+             background: -o-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /* Opera */
+             background: -ms-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /* IE 9 */
+             background: linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%);
+         }
+         /* Colour classes for the post it notes */
+         .yellow {
+            background-color:#e8dd62;
+             background: -webkit-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /* Safari/Chrome */
+             background: -moz-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /* Old Firefox */
+             background: -o-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /* Opera */
+             background: -ms-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /* IE 9 */
+             background: linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); 
+         }
+         .red {
+            background-color:#d23838;
+             background: -webkit-linear-gradient(135deg, #d73333 0%, #d73333 70%, #ee5050 100%); /* Safari/Chrome */
+             background: -moz-linear-gradient(135deg, #d73333 0%, #d73333 70%, #ee5050 100%); /* Old Firefox */
+             background: -o-linear-gradient(135deg, #d73333 0%, #d73333 70%, #ee5050 100%); /* Opera */
+             background: -ms-linear-gradient(135deg, #d73333 0%, #d73333 70%, #ee5050 100%); /* IE 9 */
+             background: linear-gradient(135deg, #d73333 0%, #d73333 70%, #ee5050 100%); 
+         }
+         .blue {
+	    width:390px;
+             height:230px;
+             padding:20px;
+            background-color:#5c97ee;
+             background: -webkit-linear-gradient(135deg, #608cce 0%, #608cce 70%, #77a0de 100%); /* Safari/Chrome */
+             background: -moz-linear-gradient(135deg, #608cce 0%, #608cce 70%, #77a0de 100%); /*  Old Firefox */
+             background: -o-linear-gradient(135deg, #608cce 0%, #608cce 70%, #77a0de 100%); /* Opera */
+             background: -ms-linear-gradient(135deg, #608cce 0%, #608cce 70%, #77a0de 100%); /*  IE 9 */
+             background: linear-gradient(135deg, #608cce 0%, #608cce 70%, #77a0de 100%); 
+         }
+        /* Font styling for headings and text inside the post it notes */
+         .change {
+            margin-top:0;
+	    margin-left: 25px;
+         }
+         h1 {
+            font-size:20px;
+         }
+         #sheesh {
+            font-size: 20px;
+         }
+	 #move {
+	    margin-left: 5px;
+	}
+
+         /* Each <figure> will ask as a polaroid so we can just style the <figure> without a class name */
+         /* The drawing pins (can use the same colour classes above) */
+         .pin {
+            width:20px;
+             height:20px;
+             position: absolute;
+             top:10px;
+             left:10px;
+             -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,.3); /* Make it work in Safari/Chrome */
+             box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+             border-radius: 20px;
+         }
+
+         #note-4{
+            top:10%;
+            left:3%;
+      }
+         #note-2 {
+            top: 12%;
+            right:42%;
+            transform:rotate(-3deg);
+            -ms-transform:rotate(-3deg); /* Make it work in IE 9 */
+            -webkit-transform:rotate(-3deg); /* Make it work in Safari and Chrome */
+         }
         
         /* Styles for secondary headings <h2> */
         h2 {
@@ -88,22 +227,6 @@
             font-weight:normal;
             font-family:Georgia, serif;
         }
-        
-        /* Styles for third level headings <h3> */
-        h3 {
-            font-size:19px;
-            color:#996699;
-            font-weight:bold;
-            font-family:Georgia, serif;
-        }
-        
-        /* Styles for fourth level headings <h3> */
-        h4 {
-            font-size:19px;
-            color:#249CA9;
-            font-weight:normal;
-            font-family:Georgia, serif;
-      }
         
         /* Styles for the right-hand column of the introduction */
         .aside {
@@ -547,7 +670,7 @@
     background-color: black;
     border: 2px solid black;
     border-radius: 20px;
-    z-index=1;
+    z-index:1;
 }
 .navbar
 {
@@ -572,7 +695,7 @@ p
 {
     color: white;
     font-size: 3em;
-    font-family: "Harlow Solid Italic", "Freestyle Script", "URW Chancery L";
+    font-family: "Harlow Solid Italic", "Freestyle Script", "URW Chancery L", "Liberation Sans Narrow";
     font-weight: Bold;
     position:relative;
     top: -8px;
