@@ -86,19 +86,19 @@
 		<table>
 			<th><h1 id="sizer"><center>Detailed Description of Proposals for talks</center><br>(Level-wise and Section-wise)</h1><br><hr></th>
                         <tr><td><h3 id="size"><center>Intermediate level</center></h3><br><hr></td></tr>
-			<tr><td> {{ line }} </td></tr>
+			<tr><td><i> {{ line }} </i></td></tr>
 		    {% elif i>30 and i<=36 %}
-			<tr><td> {{ line }} </td></tr>
+			<tr><td><i> {{ line }} </i></td></tr>
 		    {% elif i==37 %}
 			<tr><td><hr><br><h3 id="size"><center>Beginner level</center></h3><br><hr></td></tr>
-			<tr><td> {{ line }} </td></tr>
+			<tr><td><i> {{ line }} </i></td></tr>
 		    {% elif i>37 and i<=43 %}
-			<tr><td> {{ line }} </td></tr>
+			<tr><td><i> {{ line }} </i></td></tr>
 		    {% elif i==44 %}
 			<tr><td><hr><br><h3 id="size"><center>Advanced level</center></h2><br><hr></td></tr>
-			<tr><td> {{ line }} </td></tr>
+			<tr><td><i> {{ line }} </i></td></tr>
 		    {% elif i>44 and i<=50 %}
-			<tr><td> {{ line }} </td></tr>
+			<tr><td><i> {{ line }} </i></td></tr>
 		    {% else %}
 			
 		    {% endif %}
@@ -114,7 +114,6 @@
                 needed, and images (with captions) or videos.
             -->
                      
-
               
 
     <!--
@@ -557,7 +556,7 @@
             padding:0;
             margin:0;
             position:relative;
-            z-index:200;
+            z-index:2;
             float:left;
             width:340px;
     
