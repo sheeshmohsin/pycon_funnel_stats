@@ -506,7 +506,7 @@ v15=reversed(v15)
 for x in v15:
     print x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##16
-v11a,v11b = [],[]
+v11a,v11b,m = [],[],[]
 for x in v16:
     v11a.append(int(x[8]))
     v11a.append(x[3])
@@ -589,5 +589,5 @@ print len(v21)
 v21=reversed(v21)
 for x in v21:
     print x[1], "has", x[0], "likes on the topic (", x[3], ")"
-
+    print x
 

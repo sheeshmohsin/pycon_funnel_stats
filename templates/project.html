@@ -2,11 +2,12 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
 <meta http-equiv="Content-Style-Type" Content-Style-Type="text/html charset= utf-8">
 <meta http-equiv="Content-Style-Type" Content-Style-Type="text/html charset= utf-8">
 <link rel="icon" type="image/ico" href="http://s14.postimg.org/mwkabivm5/download.jpg" />
 <link type="text/css" media = "all" rel="stylesheet" href="stylesheet.css" />
-<title>Pycon funnel Stats</title>
+<title>Pycon Funnel Stats</title>
 </head>
 <body>
 <div class="header">
@@ -15,6 +16,12 @@
 </div>
 <div class="navbar">
 <p><a href= "http://in.pycon.org/funnel/2013/">Pycon Funnel Stats</a></p>
+</div>
+<div class= "search">
+<form id="tfnewsearch" method="get" action="http://www.google.com/search">
+		        <input type="text" id="tfq" class="tftextinput2" name="q" size="21" maxlength="120" value="Google Search"><input type="submit" value=">" class="tfbutton2">
+		</form>
+		<div class="tfclear"></div>
 </div>
 </div>
             
@@ -99,10 +106,11 @@
 			<tr><td><i> {{ line }} </i></td></tr>
 		    {% elif i>44 and i<=50 %}
 			<tr><td><i> {{ line }} </i></td></tr>
-		    {% else %}
-			
-		    {% endif %}
+			{% else %}
+			    
+			{% endif %}
 		{% endfor %}
+
 		</table>
         </div>
 
@@ -127,23 +135,40 @@
 		    <tr><td class="india">Web Development</td></tr>
 		    <tr><td class="india">Embedded/Real-time Python</td></tr>
 		    <tr><td class="india">Core Python</td></tr>
+
 		    <tr><td class="india">Workshops</td></tr>
+
 		    <tr><td><hr class="faded"><h3 class="himanshu"><center>BEGINNER</center></h3><hr class="project"></td></tr>
 		    <tr><td class="india">Scientific Computing</td></tr>
+
 		    <tr><td class="india">Software Development Tools</td></tr>
+
 		    <tr><td class="india">Infrastructure</td></tr>
+
 		    <tr><td class="india">Web Development</td></tr>
+
 		    <tr><td class="india">Embedded/Real-time Python</td></tr>
+
 		    <tr><td class="india">Core Python</td></tr>
+
 		    <tr><td class="india">Workshops</td></tr>
+
 		    <tr><td><hr class="faded"><h3 class="himanshu"><center>ADVANCED</center></h3><hr class="project"></td></tr>
 		    <tr><td class="india">Scientific Computing</td></tr>
+
 		    <tr><td class="india">Software Development Tools</td></tr>
+
 		    <tr><td class="india">Infrastructure</td></tr>
+
 		    <tr><td class="india">Web Development</td></tr>
+
 		    <tr><td class="india">Embedded/Real-time Python</td></tr>
+
 		    <tr><td class="india">Core Python</td></tr>
+
 		    <tr><td class="india">Workshops</td></tr>
+
+
 		</table>
 	</div>          
 
@@ -172,7 +197,6 @@
         }
         html {
             height:100%;
-	    overflow-y: auto;
         }
          .post-it-note,
          .polaroid {
@@ -305,8 +329,7 @@
             -moz-transform: rotate(3deg); /* Firefox */
             -ms-transform: rotate(3deg); /* IE */
             -o-transform: rotate(3deg); /* Opera */
-        }
-        
+        }        
         /* Styles for introduction photo hover state */
         .aside .photo:hover {
             /*
@@ -370,7 +393,7 @@
             box-shadow:1px 3px 15px 2px #ddd;
             background-color: #eef5f9;
             border: 1px solid #dedede;
-            
+            z-index: 200;
             transform: rotate(-3deg); /* All */
             
             -webkit-transform: rotate(-3deg); /* Chrome & Safari */
@@ -462,7 +485,7 @@
         /* Styles for item numbering */
         .step-by-step li:before {
             border-radius: 0px 0px 0px 0px;
-            
+            z-index: -1;
             background: #F9F9F9;
             background: linear-gradient(top,#F9F9F9, #F9F9F9);
             
@@ -590,7 +613,6 @@
             padding:0;
             margin:0;
             position:relative;
-            z-index:2;
             float:left;
             width:340px;
     
@@ -623,7 +645,7 @@
         .step-by-step {  
             padding:0;
             position: relative;
-            z-index:0;
+	    z-index: 0;
             margin-left:40px;
         }
         .step-by-step li {
@@ -679,7 +701,7 @@
             position: absolute;
             top:0;
             left:-40px;
-            z-index:-1;
+
         }
 
         a img {
@@ -698,6 +720,8 @@
     <!{endif}-->
 
 <style media="screen" type="text/css">
+@import url(http://fonts.googleapis.com/css?family=Harlow Solid Italic);
+@import url(http://fonts.googleapis.com/css?family="Liberation Sans Narrow");
 .header
 {
     margin-top: -90px;
@@ -830,10 +854,23 @@ hr
     font-weight:bold;
     position: relative;
     left: 195px;
-    font-family: URW Chancery L, serif; 
+    font-family: "URW Chancery L", serif; 
 }
 #pycon {
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#pycon::-webkit-scrollbar {
+    width: 10px;
+}
+#pycon::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+#pycon::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 .project {
     height: 12px;
@@ -856,6 +893,70 @@ hr
     top: 0px;
     box-shadow: 3px 3px 2px rgba(0,0,0,.8);
 }
+#tfnewsearch{
+		float:right;
+		padding:20px;
+	}
+	.tftextinput2{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		color:#666;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton2 {
+		margin: 0;
+		padding: 5px 7px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		font-weight:bold;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		background: #0095cd;
+		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	.tfbutton2:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton2::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+.search {
+	position: absolute;
+	top: -2%;
+	left: 77%;
+}
 </style>
+<script type="text/javascript">
+window.onload = function(){ 
+	//Get submit button
+	var submitbutton = document.getElementById("tfq");
+	//Add listener to submit button
+	if(submitbutton.addEventListener){
+		submitbutton.addEventListener("click", function() {
+			if (submitbutton.value == 'Search our website'){//Customize this text string to whatever you want
+				submitbutton.value = '';
+			}
+		});
+	}
+}
+</script>
 </body>
 </html>
