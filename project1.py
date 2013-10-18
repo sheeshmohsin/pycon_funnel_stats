@@ -295,6 +295,7 @@ print "Number of proposals for Core Python=",cora
 print "Number of proposals for Workshops=",worka
 #like-wise arrangement along with level wise and section wise
 ##1
+array = [sci,soft,infr,web,emb,cor,work,scib,softb,infrb,webb,embb,corb,workb,scia,softa,infra,weba,emba,cora,worka]
 v11a,v11b = [],[]
 for x in v1:
     v11a.append(int(x[8]))
@@ -304,7 +305,7 @@ for x in v1:
     v11b.append(v11a)
     v11a=[]
 v1=sorted(v11b)
-print len(v1)
+print array
 v1=reversed(v1)
 for x in v1:
     print x[1], "has", x[0], "likes on the topic (", x[3], ")"
@@ -506,7 +507,7 @@ v15=reversed(v15)
 for x in v15:
     print x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##16
-v11a,v11b,m = [],[],[]
+v11a,v11b = [],[]
 for x in v16:
     v11a.append(int(x[8]))
     v11a.append(x[3])

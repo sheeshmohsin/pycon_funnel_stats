@@ -2,6 +2,7 @@ import flask
 import subprocess
 from jinja2 import Environment
 from jinja2.loaders import FileSystemLoader
+import jinja2
 
 app = flask.Flask(__name__)
 
@@ -16,7 +17,7 @@ def index():
 
         for line in iter(proc.stdout.readline,''):
             yield line.rstrip() + '<br/>\n'
-    
+
     env = Environment(loader=FileSystemLoader('templates'))
     tmpl = env.get_template('project.html')
     return flask.Response(tmpl.generate(project=inner()))

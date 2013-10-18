@@ -106,8 +106,8 @@
 			<tr><td><i> {{ line }} </i></td></tr>
 		    {% elif i>44 and i<=50 %}
 			<tr><td><i> {{ line }} </i></td></tr>
-			{% else %}
-			    
+		    {% else %}
+			
 			{% endif %}
 		{% endfor %}
 
@@ -770,6 +770,7 @@ body
 {
     background-color: #38B0DE;
     padding:30px;
+    overflow-x: hidden;
 }
 .level-wise
 {
@@ -943,6 +944,18 @@ hr
 	top: -2%;
 	left: 77%;
 }
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
 </style>
 <script type="text/javascript">
 window.onload = function(){ 
@@ -951,7 +964,7 @@ window.onload = function(){
 	//Add listener to submit button
 	if(submitbutton.addEventListener){
 		submitbutton.addEventListener("click", function() {
-			if (submitbutton.value == 'Search our website'){//Customize this text string to whatever you want
+			if (submitbutton.value == 'Google Search'){//Customize this text string to whatever you want
 				submitbutton.value = '';
 			}
 		});
