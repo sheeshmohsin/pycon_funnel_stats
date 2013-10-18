@@ -18,7 +18,7 @@ def index():
         for line in iter(proc.stdout.readline,''):
             yield line.rstrip() + '<br/>\n'
 
-    env = Environment(loader=FileSystemLoader('templates'))
+    env = Environment(loader=FileSystemLoader('templates'),extensions=['jinja2.ext.loopcontrols'])
     tmpl = env.get_template('project.html')
     return flask.Response(tmpl.generate(project=inner()))
 

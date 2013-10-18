@@ -270,29 +270,29 @@ print "Total Number of proposals under intermediate level=",inter
 print "Total Number of proposals under beginner level=",beg
 print "Total Number of proposals under advanced level=",adv
 # //Intermediate level//*/
-print "Number of proposals for Scientific Computing=",sci
-print "Number of proposals for Software Development Tools=",soft
-print "Number of proposals for Infrastructure=",infr
-print "Number of proposals for Web Developemnt=",web
-print "Number of proposals for Embedded/Real-Time Python=",emb
-print "Number of proposals for Core Python=",cor
-print "Number of proposals for Workshops=",work
+print "Scientific Computing=",sci,"Proposals"
+print "Software Development Tools=",soft,"Proposals"
+print "Infrastructure=",infr,"Proposals"
+print "Web Developemnt=",web,"Proposals"
+print "Embedded/Real-Time Python=",emb,"Proposals"
+print "Core Python=",cor,"Proposals"
+print "Workshops=",work,"Proposals"
 # //Beginner level// */
-print "Number of proposals for Scientific Computing=",scib
-print "Number of proposals for Software Development Tools=",softb
-print "Number of proposals for Infrastructure=",infrb
-print "Number of proposals for Web Developemnt=",webb
-print "Number of proposals for Embedded/Real-Time Python=",embb
-print "Number of proposals for Core Python=",corb
-print "Number of proposals for Workshops=",workb
+print "Scientific Computing=",scib,"Proposals"
+print "Software Development Tools=",softb,"Proposals"
+print "Infrastructure=",infrb,"Proposals"
+print "Web Developemnt=",webb,"Proposals"
+print "Embedded/Real-Time Python=",embb,"Proposals"
+print "Core Python=",corb,"Proposals"
+print "Workshops=",workb,"Proposals"
 # //Advanced level//*/
-print "Number of proposals for Scientific Computing=",scia
-print "Number of proposals for Software Development Tools=",softa
-print "Number of proposals for Infrastructure=",infra
-print "Number of proposals for Web Developemnt=",weba
-print "Number of proposals for Embedded/Real-Time Python=",emba
-print "Number of proposals for Core Python=",cora
-print "Number of proposals for Workshops=",worka
+print "Scientific Computing=",scia,"Proposals"
+print "Software Development Tools=",softa,"Proposals"
+print "Infrastructure=",infra,"Proposals"
+print "Web Developemnt=",weba,"Proposals"
+print "Embedded/Real-Time Python=",emba,"Proposals"
+print "Core Python=",cora,"Proposals"
+print "Workshops=",worka,"Proposals"
 #like-wise arrangement along with level wise and section wise
 ##1
 array = [sci,soft,infr,web,emb,cor,work,scib,softb,infrb,webb,embb,corb,workb,scia,softa,infra,weba,emba,cora,worka]

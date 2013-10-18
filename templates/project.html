@@ -86,35 +86,7 @@
             <ol>
 			    {% elif i>=27 and i<=29 %}
     			        <li> {{ line }} </li>
-<<<<<<< HEAD
 			    {% elif i==30 %}
-          </ol>
-        </div>
-	<div class="level-wise">
-		<table>
-			<th><h1 id="sizer"><center>Detailed Description of Proposals for talks</center><br>(Level-wise and Section-wise)</h1><br><hr></th>
-                        <tr><td><h3 id="size"><center>Intermediate level</center></h3><br><hr></td></tr>
-			<tr><td><i> {{ line }} </i></td></tr>
-		    {% elif i>30 and i<=36 %}
-			<tr><td><i> {{ line }} </i></td></tr>
-		    {% elif i==37 %}
-			<tr><td><hr><br><h3 id="size"><center>Beginner level</center></h3><br><hr></td></tr>
-			<tr><td><i> {{ line }} </i></td></tr>
-		    {% elif i>37 and i<=43 %}
-			<tr><td><i> {{ line }} </i></td></tr>
-		    {% elif i==44 %}
-			<tr><td><hr><br><h3 id="size"><center>Advanced level</center></h2><br><hr></td></tr>
-			<tr><td><i> {{ line }} </i></td></tr>
-		    {% elif i>44 and i<=50 %}
-			<tr><td><i> {{ line }} </i></td></tr>
-		    {% else %}
-			
-=======
-			    {% else %}
-			    
->>>>>>> 14bab56885c00bc41a39e1b28451ad27e368889d
-			{% endif %}
-		{% endfor %}
 
           </ol>
         </div>
@@ -132,10 +104,35 @@
 		</div>
 	</div>
 	<div class="six">		
-		<div class="leader" id="style-one"></div><div class="leader" id="style-two"></div><div class="leader" id="style-three"></div>
+		<div class="leader" id="style-one">
+		<table class="arrange">
+			<tr><td><b><i>{{ line }}</i></b></td></tr>
+		{% elif i>30 and i<=36 %}
+			<tr><td><b><i>{{ line }}</i></b></td></tr>
+		{% elif i==37 %}
+		</table>
+		</div>
+		<div class="leader" id="style-two">
+		<table class="arrange">
+			<tr><td><b><i>{{ line }}</i></b></li></td></tr>
+		{% elif i>37 and i<=43 %}
+			<tr><td><b><i>{{ line }}</i></b></td></tr>
+		{% elif i==44 %}
+		</table>
+		</div>
+		<div class="leader" id="style-three">
+		<table class="arrange">
+			<tr><td><b><i>{{ line }}</i></b></td></tr>
+		{% elif i>44 and i<=50 %}
+			<tr><td><b><i>{{ line }}</i></b></td></tr>
+            	{% else %}
+			{% break %}
+		{% endif %}
+		{% endfor %}
+		</table>	
+		</div>
+	</div>	    
 	</div>
-	</div>
-            
             
             <!--
                 TASK 2
@@ -931,7 +928,6 @@ h3 {
 	top: -2%;
 	left: 77%;
 }
-<<<<<<< HEAD
 body::-webkit-scrollbar {
     width: 10px;
 }
@@ -943,7 +939,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-=======
+}
 .level-wise {
     height: 28.5em;
     width: 55em;
@@ -951,7 +947,7 @@ body::-webkit-scrollbar-thumb {
     border: 2px solid #FFFFFF;
     border-radius:8px;
     position:absolute;
-    top: 80%;
+    top: 110%;
     left: 0%
 }
 .sizer {
@@ -1038,8 +1034,8 @@ body::-webkit-scrollbar-thumb {
     border: 1px solid #FFFFFF;
     border-bottom-right-radius: 5px;
     position: relative;
-    left: .25%;
-    top: -4.98%;
+    left: 67.5%;
+    top: -111.3%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 
@@ -1050,7 +1046,6 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     top: 5%;
     right: 10%;
->>>>>>> 14bab56885c00bc41a39e1b28451ad27e368889d
 }
 </style>
 <script type="text/javascript">
