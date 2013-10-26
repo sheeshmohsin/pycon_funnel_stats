@@ -115,7 +115,6 @@ for u in fname:
             sum0a=sum0a+int(u[8])
             worka+=1
 	    v21.append(u)
-
 if sum!=0:
     overallaveragelikes = sum/l
     print "Over all average likes=",overallaveragelikes
@@ -295,20 +294,21 @@ print "Core Python=",cora,"Proposals"
 print "Workshops=",worka,"Proposals"
 #like-wise arrangement along with level wise and section wise
 ##1
-array = [sci,soft,infr,web,emb,cor,work,scib,softb,infrb,webb,embb,corb,workb,scia,softa,infra,weba,emba,cora,worka]
 v11a,v11b = [],[]
 for x in v1:
     v11a.append(int(x[8]))
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v1=sorted(v11b)
-print array
+print "a" * l,
+print "\n"
 v1=reversed(v1)
 for x in v1:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##2
 v11a,v11b = [],[]
 for x in v2:
@@ -316,13 +316,13 @@ for x in v2:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v2=sorted(v11b)
-print len(v2)
 v2=reversed(v2)
 for x in v2:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 
 ##3
 v11a,v11b = [],[]
@@ -331,13 +331,13 @@ for x in v3:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v3=sorted(v11b)
-print len(v3)
 v3=reversed(v3)
 for x in v3:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##4
 v11a,v11b = [],[]
 for x in v4:
@@ -345,13 +345,13 @@ for x in v4:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v4=sorted(v11b)
-print len(v4)
 v4=reversed(v4)
 for x in v4:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##5
 v11a,v11b = [],[]
 for x in v5:
@@ -359,13 +359,13 @@ for x in v5:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v5=sorted(v11b)
-print len(v5)
 v5=reversed(v5)
 for x in v5:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##6
 v11a,v11b = [],[]
 for x in v6:
@@ -373,13 +373,13 @@ for x in v6:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v6=sorted(v11b)
-print len(v6)
 v6=reversed(v6)
 for x in v6:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##7
 v11a,v11b = [],[]
 for x in v7:
@@ -387,13 +387,13 @@ for x in v7:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v7=sorted(v11b)
-print len(v7)
 v7=reversed(v7)
 for x in v7:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##8
 v11a,v11b = [],[]
 for x in v8:
@@ -401,13 +401,13 @@ for x in v8:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v8=sorted(v11b)
-print len(v8)
 v8=reversed(v8)
 for x in v8:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##9
 v11a,v11b = [],[]
 for x in v9:
@@ -415,13 +415,13 @@ for x in v9:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v9=sorted(v11b)
-print len(v9)
 v9=reversed(v9)
 for x in v9:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##10
 v11a,v11b = [],[]
 for x in v10:
@@ -429,13 +429,13 @@ for x in v10:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v10=sorted(v11b)
-print len(v10)
 v10=reversed(v10)
 for x in v10:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##11
 v11a,v11b = [],[]
 for x in v11:
@@ -443,13 +443,13 @@ for x in v11:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v11=sorted(v11b)
-print len(v11)
 v11=reversed(v11)
 for x in v11:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##12
 v11a,v11b = [],[]
 for x in v12:
@@ -457,13 +457,13 @@ for x in v12:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v12=sorted(v11b)
-print len(v12)
 v12=reversed(v12)
 for x in v12:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##13
 v11a,v11b = [],[]
 for x in v13:
@@ -471,13 +471,13 @@ for x in v13:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v13=sorted(v11b)
-print len(v13)
 v13=reversed(v13)
 for x in v13:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##14
 v11a,v11b = [],[]
 for x in v14:
@@ -485,13 +485,13 @@ for x in v14:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v14=sorted(v11b)
-print len(v14)
 v14=reversed(v14)
 for x in v14:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##15
 v11a,v11b = [],[]
 for x in v15:
@@ -499,13 +499,13 @@ for x in v15:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v15=sorted(v11b)
-print len(v15)
 v15=reversed(v15)
 for x in v15:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##16
 v11a,v11b = [],[]
 for x in v16:
@@ -513,13 +513,13 @@ for x in v16:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v16=sorted(v11b)
-print len(v16)
 v16=reversed(v16)
 for x in v16:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##17
 v11a,v11b = [],[]
 for x in v17:
@@ -527,13 +527,13 @@ for x in v17:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v17=sorted(v11b)
-print len(v17)
 v17=reversed(v17)
 for x in v17:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##18
 v11a,v11b = [],[]
 for x in v18:
@@ -541,13 +541,13 @@ for x in v18:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v18=sorted(v11b)
-print len(v18)
 v18=reversed(v18)
 for x in v18:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##19
 v11a,v11b = [],[]
 for x in v19:
@@ -555,13 +555,13 @@ for x in v19:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v19=sorted(v11b)
-print len(v19)
 v19=reversed(v19)
 for x in v19:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##20
 v11a,v11b = [],[]
 for x in v20:
@@ -569,13 +569,13 @@ for x in v20:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v20=sorted(v11b)
-print len(v20)
 v20=reversed(v20)
 for x in v20:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##21
 v11a,v11b = [],[]
 for x in v21:
@@ -583,12 +583,11 @@ for x in v21:
     v11a.append(x[3])
     v11a.append(x[5])
     v11a.append(x[1])
+    v11a.append(x[7])
     v11b.append(v11a)
     v11a=[]
 v21=sorted(v11b)
-print len(v21)
 v21=reversed(v21)
 for x in v21:
-    print x[1], "has", x[0], "likes on the topic (", x[3], ")"
-    print x
+    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 
