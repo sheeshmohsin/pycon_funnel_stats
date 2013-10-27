@@ -115,6 +115,7 @@ for u in fname:
             sum0a=sum0a+int(u[8])
             worka+=1
 	    v21.append(u)
+v1a,v2a,v3a,v4a,v5a,v6a,v7a,v8a,v9a,v10a,v11c,v12c,v13c,v14c,v15c,v16c,v17c,v18c,v19c,v20c,v21c=v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21
 if sum!=0:
     overallaveragelikes = sum/l
     print "Over all average likes=",overallaveragelikes
@@ -292,9 +293,139 @@ print "Web Developemnt=",weba,"Proposals"
 print "Embedded/Real-Time Python=",emba,"Proposals"
 print "Core Python=",cora,"Proposals"
 print "Workshops=",worka,"Proposals"
+#Probability of candidates that can be selected
+line=0
+for x in v1a:
+    if int(x[8]) >= avgvotesforinterforsci:
+	line=line+1
+for x in v2a:
+    if int(x[8]) >= avgvotesforinterforsoft:
+	line=line+1
+for x in v3a:
+    if int(x[8]) >= avgvotesforinterforinfr:
+	line=line+1
+for x in v4a:
+    if int(x[8]) >= avgvotesforinterforweb:
+	line=line+1
+for x in v5a:
+    if int(x[8]) >= avgvotesforinterforemb:
+	line=line+1
+for x in v6a:
+    if int(x[8]) >= avgvotesforinterforcor:
+	line=line+1
+for x in v7a:
+    if int(x[8]) >= avgvotesforinterforwork:
+	line=line+1
+for x in v8a:
+    if int(x[8]) >= avgvotesforinterforscib:
+	line=line+1
+for x in v9a:
+    if int(x[8]) >= avgvotesforinterforsoftb:
+	line=line+1
+for x in v10a:
+    if int(x[8]) >= avgvotesforinterforinfrb:
+	line=line+1
+for x in v11c:
+    if int(x[8]) >= avgvotesforinterforwebb:
+	line=line+1
+for x in v12c:
+    if int(x[8]) >= avgvotesforinterforembb:
+	line=line+1
+for x in v13c:
+    if int(x[8]) >= avgvotesforinterforcorb:
+	line=line+1
+for x in v14c:
+    if int(x[8]) >= avgvotesforinterforworkb:
+	line=line+1
+for x in v15c:
+    if int(x[8]) >= avgvotesforinterforscia:
+	line=line+1
+for x in v16c:
+    if int(x[8]) >= avgvotesforinterforsofta:
+	line=line+1
+for x in v17c:
+    if int(x[8]) >= avgvotesforinterforinfra:
+	line=line+1
+for x in v18c:
+    if int(x[8]) >= avgvotesforinterforweba:
+	line=line+1
+for x in v19c:
+    if int(x[8]) >= avgvotesforinterforemba:
+	line=line+1
+for x in v20c:
+    if int(x[8]) >= avgvotesforinterforcora:
+	line=line+1
+for x in v21c:
+    if int(x[8]) >= avgvotesforinterforworka:
+	line=line+1
+print "a" * line,
+print "\n"
+for x in v1a:
+    if int(x[8]) >= avgvotesforinterforsci:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v2a:
+    if int(x[8]) >= avgvotesforinterforsoft:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v3a:
+    if int(x[8]) >= avgvotesforinterforinfr:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v4a:
+    if int(x[8]) >= avgvotesforinterforweb:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v5a:
+    if int(x[8]) >= avgvotesforinterforemb:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v6a:
+    if int(x[8]) >= avgvotesforinterforcor:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v7a:
+    if int(x[8]) >= avgvotesforinterforwork:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v8a:
+    if int(x[8]) >= avgvotesforinterforscib:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v9a:
+    if int(x[8]) >= avgvotesforinterforsoftb:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v10a:
+    if int(x[8]) >= avgvotesforinterforinfrb:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v11c:
+    if int(x[8]) >= avgvotesforinterforwebb:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v12c:
+    if int(x[8]) >= avgvotesforinterforembb:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v13c:
+    if int(x[8]) >= avgvotesforinterforcorb:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v14c:
+    if int(x[8]) >= avgvotesforinterforworkb:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v15c:
+    if int(x[8]) >= avgvotesforinterforscia:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v16c:
+    if int(x[8]) >= avgvotesforinterforsofta:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v17c:
+    if int(x[8]) >= avgvotesforinterforinfra:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v18c:
+    if int(x[8]) >= avgvotesforinterforweba:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v19c:
+    if int(x[8]) >= avgvotesforinterforemba:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v20c:
+    if int(x[8]) >= avgvotesforinterforcora:
+	print "(",x[7],")","(",x[5],")",":",x[3]
+for x in v21c:
+    if int(x[8]) >= avgvotesforinterforworka:
+	print "(",x[7],")","(",x[5],")",":",x[3]
 #like-wise arrangement along with level wise and section wise
 ##1
-v11a,v11b = [],[]
+v11a,v11b,v1a = [],[],[]
 for x in v1:
     v11a.append(int(x[8]))
     v11a.append(x[3])
@@ -308,7 +439,7 @@ print "a" * l,
 print "\n"
 v1=reversed(v1)
 for x in v1:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##2
 v11a,v11b = [],[]
 for x in v2:
@@ -322,7 +453,7 @@ for x in v2:
 v2=sorted(v11b)
 v2=reversed(v2)
 for x in v2:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 
 ##3
 v11a,v11b = [],[]
@@ -337,7 +468,7 @@ for x in v3:
 v3=sorted(v11b)
 v3=reversed(v3)
 for x in v3:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##4
 v11a,v11b = [],[]
 for x in v4:
@@ -351,7 +482,7 @@ for x in v4:
 v4=sorted(v11b)
 v4=reversed(v4)
 for x in v4:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##5
 v11a,v11b = [],[]
 for x in v5:
@@ -365,7 +496,7 @@ for x in v5:
 v5=sorted(v11b)
 v5=reversed(v5)
 for x in v5:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##6
 v11a,v11b = [],[]
 for x in v6:
@@ -379,7 +510,7 @@ for x in v6:
 v6=sorted(v11b)
 v6=reversed(v6)
 for x in v6:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##7
 v11a,v11b = [],[]
 for x in v7:
@@ -393,7 +524,7 @@ for x in v7:
 v7=sorted(v11b)
 v7=reversed(v7)
 for x in v7:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##8
 v11a,v11b = [],[]
 for x in v8:
@@ -407,7 +538,7 @@ for x in v8:
 v8=sorted(v11b)
 v8=reversed(v8)
 for x in v8:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##9
 v11a,v11b = [],[]
 for x in v9:
@@ -421,7 +552,7 @@ for x in v9:
 v9=sorted(v11b)
 v9=reversed(v9)
 for x in v9:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##10
 v11a,v11b = [],[]
 for x in v10:
@@ -435,7 +566,7 @@ for x in v10:
 v10=sorted(v11b)
 v10=reversed(v10)
 for x in v10:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##11
 v11a,v11b = [],[]
 for x in v11:
@@ -449,7 +580,7 @@ for x in v11:
 v11=sorted(v11b)
 v11=reversed(v11)
 for x in v11:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##12
 v11a,v11b = [],[]
 for x in v12:
@@ -463,7 +594,7 @@ for x in v12:
 v12=sorted(v11b)
 v12=reversed(v12)
 for x in v12:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##13
 v11a,v11b = [],[]
 for x in v13:
@@ -477,7 +608,7 @@ for x in v13:
 v13=sorted(v11b)
 v13=reversed(v13)
 for x in v13:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##14
 v11a,v11b = [],[]
 for x in v14:
@@ -491,7 +622,7 @@ for x in v14:
 v14=sorted(v11b)
 v14=reversed(v14)
 for x in v14:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##15
 v11a,v11b = [],[]
 for x in v15:
@@ -505,7 +636,7 @@ for x in v15:
 v15=sorted(v11b)
 v15=reversed(v15)
 for x in v15:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##16
 v11a,v11b = [],[]
 for x in v16:
@@ -519,7 +650,7 @@ for x in v16:
 v16=sorted(v11b)
 v16=reversed(v16)
 for x in v16:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##17
 v11a,v11b = [],[]
 for x in v17:
@@ -533,7 +664,7 @@ for x in v17:
 v17=sorted(v11b)
 v17=reversed(v17)
 for x in v17:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##18
 v11a,v11b = [],[]
 for x in v18:
@@ -547,7 +678,7 @@ for x in v18:
 v18=sorted(v11b)
 v18=reversed(v18)
 for x in v18:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##19
 v11a,v11b = [],[]
 for x in v19:
@@ -561,7 +692,7 @@ for x in v19:
 v19=sorted(v11b)
 v19=reversed(v19)
 for x in v19:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##20
 v11a,v11b = [],[]
 for x in v20:
@@ -575,7 +706,7 @@ for x in v20:
 v20=sorted(v11b)
 v20=reversed(v20)
 for x in v20:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
 ##21
 v11a,v11b = [],[]
 for x in v21:
@@ -589,5 +720,6 @@ for x in v21:
 v21=sorted(v11b)
 v21=reversed(v21)
 for x in v21:
-    print "(",x[2],")","(",x[4],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+    print "(",x[4],")","(",x[2],")", x[1], "has", x[0], "likes on the topic (", x[3], ")"
+
 

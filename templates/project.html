@@ -125,10 +125,7 @@
 			<tr><td><b><i>{{ line }}</i></b></td></tr>
 		{% elif i>44 and i<=50 %}
 			<tr><td><b><i>{{ line }}</i></b></td></tr>
-            	{% else %}
-			{% break %}
-		{% endif %}
-		{% endfor %}
+		{% elif i==51 %}
 		</table>	
 		</div>
 	</div>	    
@@ -136,6 +133,16 @@
 
 
 	<div class="nation"><h3 class="letterpress">Probablity of Candidates that can be Selected</h3><hr class="line">
+			{% set j= line|length %}
+			{% set k= j-6 %}
+		    {% elif i==52 %}
+		    		<table>
+			<tr><td>    </td></tr>
+			<tr><td>    </td></tr>
+		    {% elif i>52 and i<=52+k %}
+		    <tr><td class="funnel"><b><i>{{ line }}</i></b></td></tr>
+		    {% elif i==52+k+1 %}
+		</table>
 	</div>       
 
             
@@ -151,46 +158,18 @@
 		    <tr>
 			<th><h1><center class="footer">Detailed description of Candidates</center><br><center class="footer">(Likewise)</center></h1><br></th>
 		    </tr></div>
-		    <tr><td><br><h3 class="himanshu"><center>INTERMEDIATE</center></h3><hr class="project"></td></tr>
-		    <tr><td class="india">Scientific Computing</td></tr>
-		    <tr><td class="india">Software Development Tools</td></tr>
-		    <tr><td class="india">Infrastructure</td></tr>
-		    <tr><td class="india">Web Development</td></tr>
-		    <tr><td class="india">Embedded/Real-time Python</td></tr>
-		    <tr><td class="india">Core Python</td></tr>
-
-		    <tr><td class="india">Workshops</td></tr>
-
-		    <tr><td><hr class="faded"><h3 class="himanshu"><center>BEGINNER</center></h3><hr class="project"></td></tr>
-		    <tr><td class="india">Scientific Computing</td></tr>
-
-		    <tr><td class="india">Software Development Tools</td></tr>
-
-		    <tr><td class="india">Infrastructure</td></tr>
-
-		    <tr><td class="india">Web Development</td></tr>
-
-		    <tr><td class="india">Embedded/Real-time Python</td></tr>
-
-		    <tr><td class="india">Core Python</td></tr>
-
-		    <tr><td class="india">Workshops</td></tr>
-
-		    <tr><td><hr class="faded"><h3 class="himanshu"><center>ADVANCED</center></h3><hr class="project"></td></tr>
-		    <tr><td class="india">Scientific Computing</td></tr>
-
-		    <tr><td class="india">Software Development Tools</td></tr>
-
-		    <tr><td class="india">Infrastructure</td></tr>
-
-		    <tr><td class="india">Web Development</td></tr>
-
-		    <tr><td class="india">Embedded/Real-time Python</td></tr>
-
-		    <tr><td class="india">Core Python</td></tr>
-
-		    <tr><td class="india">Workshops</td></tr>
-
+		        {% set m= line|length %}
+			{% set n= j-6 %}
+			{% set o = 52+k+1 %}
+		{% elif i == o+1 %}
+			<tr><td>    </td></tr>
+			<tr><td>    </td></tr>
+             	{% elif i>o+1 and i<=o+n+1 %}
+		    <tr><td class="funnel"><b><i>{{ line }}</i></b></td></tr>
+		{% else %}
+			{% break %}
+		{% endif %}
+		{% endfor %}
 
 		</table>
 	</div>
@@ -841,14 +820,6 @@ h3 {
     position: relative;
     left: 189px;
 }
-.himanshu {
-    font-size: 25px;
-    color: #FF4500;
-    font-weight: bold;
-    position: relative;
-    left: 195px;
-    font-family: URW Chancery L, serif; 
-}
 #pycon {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -1065,6 +1036,8 @@ body::-webkit-scrollbar-thumb {
     border-radius: 5px;
     border: 1px solid #1c9dff;
     box-shadow:0 10px 20px #000;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .letterpress {
     font-size: 20px;
@@ -1085,6 +1058,18 @@ body::-webkit-scrollbar-thumb {
     height: 12px;
     border: 0;
     box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+}
+.nation::-webkit-scrollbar {
+    width: 10px;
+}
+.nation::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+.nation::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 </style>
 <script type="text/javascript">
