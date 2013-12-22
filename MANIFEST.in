@@ -1,0 +1,5 @@
+include *.py
+include *.html
+include README.rst
+include project1
+
