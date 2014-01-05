@@ -823,6 +823,7 @@ h3 {
 #pycon {
     overflow-y: scroll;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 #pycon::-webkit-scrollbar {
     width: 10px;
@@ -835,6 +836,9 @@ h3 {
 #pycon::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+#pycon::-webkit-scrollbar-button {
+    color: grey;
 }
 .project {
     height: 12px;
@@ -919,6 +923,10 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
+body::-webkit-scrollbar-button {
+    color: grey;
+}
+
 .level-wise {
     height: 28.5em;
     width: 55em;
@@ -1038,6 +1046,7 @@ body::-webkit-scrollbar-thumb {
     box-shadow:0 10px 20px #000;
     overflow-y: scroll;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 .letterpress {
     font-size: 20px;
@@ -1070,6 +1079,9 @@ body::-webkit-scrollbar-thumb {
 .nation::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.nation::-webkit-scrollbar-button {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 </style>
 <script type="text/javascript">
